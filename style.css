@@ -330,7 +330,7 @@ main{
     margin-top: 4em;
     display: flex;
     flex-direction: column;
-    gap: 4em;
+    gap: 5em;
 }
 
 .feature_card{
@@ -381,7 +381,7 @@ main{
     position: absolute;
     font-size: 10rem;
     font-weight: 900;
-    top: -80px;
+    top: -50px;
     left: .5em;
     color: var(--clr--200);
     z-index: -2;
@@ -390,7 +390,7 @@ main{
 @media screen and (min-width: 670px) {
     .hero_stat{
     position: absolute;
-    top: -150px;
+    top: -220px;
     width: 90%;
     padding: 2em;
     background-color: var(--clr--100);
@@ -409,7 +409,7 @@ main{
     }
 
     .feature_content{
-        margin-top: 5em;
+        margin-top: 4em;
         padding: 4em 0;
     }
 
