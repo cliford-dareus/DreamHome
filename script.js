@@ -11,3 +11,25 @@ menuBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     menu.classList.remove('mobile_menu')
 })
+
+function halfScroll(){
+    const controller = new ScrollMagic.Controller();
+    console.log(controller)
+    
+    new ScrollMagic.Scene({
+        duration: '300%',
+        triggerElement: '.about-us',
+        triggerHook: 0
+    })
+    .setPin('.about-us')
+    .addIndicators({
+        colorTrigger: "red",
+        colorStart : "green",
+        colorEnd: 'blue',
+    })
+    .addTo(controller);
+}
+
+halfScroll();
+
+

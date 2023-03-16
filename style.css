@@ -524,3 +524,59 @@ main{
         grid-row: 4 / 5;
     }
 }
+
+/* ===================ABOUT US======================== */
+.about-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 1em;
+}
+
+.about-us h3{
+    font-size: 2rem;
+}
+
+.staff-card {
+
+}
+
+
+@media screen and (min-width: 670px) {
+    .about-container{
+        flex-direction: row;
+        height: 400vh;
+    }
+
+    .about-us{
+        width: 50% !important;
+    }
+
+    .staffs{
+        width: 50%;
+       
+    }
+
+    .staff-card{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+
+/* ======================FOOTER========================= */
+.footer{
+    height: 200px;
+}
