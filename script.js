@@ -12,9 +12,9 @@ closeBtn.addEventListener('click', () => {
     menu.classList.remove('mobile_menu')
 })
 
+
 function halfScroll(){
     const controller = new ScrollMagic.Controller();
-    console.log(controller)
     
     new ScrollMagic.Scene({
         duration: '300%',
@@ -31,5 +31,32 @@ function halfScroll(){
 }
 
 halfScroll();
+
+const controllerw = new ScrollMagic.Controller();
+const tl = new TimelineMax();
+
+tl.fromTo(
+    '.about-us-shape',
+    .25,
+    {x: 100},
+    {x: 0, ease: Linear.easeNone},
+    '+=0.01'
+)
+
+new ScrollMagic.Scene({
+    triggerElement: '.about-us',
+    triggerHook: 0,
+    duration: '300%'
+})
+    .setPin('.about-us-shape')
+    .setTween(tl)
+    .addIndicators({
+        colorTrigger: "red",
+        colorStart : "red",
+        colorEnd: 'red',
+        indent: 40
+    })
+    .addTo(controllerw)
+
 
 
