@@ -556,11 +556,20 @@ main{
 
 .about-us-shape{
     width: 5em;
-    aspect-ratio: 1;
+    height: 5em;
     border-radius: 50%;
     border: 1px solid var(--clr--400);
     position: absolute;
     top: 0;
+}
+
+.shape-one{
+    left: 1em;
+}
+
+.shape-two{
+    top: 40%;
+    right: 2em;
 }
 
 @media screen and (min-width: 670px) {

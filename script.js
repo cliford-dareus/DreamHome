@@ -36,17 +36,25 @@ const controllerw = new ScrollMagic.Controller();
 const tl = new TimelineMax();
 
 tl.fromTo(
-    '.about-us-shape',
+    '.about-us-shape.shape-one',
     .25,
-    {x: 100},
-    {x: 0, ease: Linear.easeNone},
+    {xPercent: 0},
+    {xPercent: 100, ease: Linear.easeNone},
+    '+=0.01'
+)
+
+tl.fromTo(
+    '.about-us-shape.shape-two',
+    .25,
+    {xPercent: 0},
+    {xPercent: 100, ease: Linear.easeNone},
     '+=0.01'
 )
 
 new ScrollMagic.Scene({
     triggerElement: '.about-us',
-    triggerHook: 0,
-    duration: '300%'
+    triggerHook: .25,
+    duration: '300%',
 })
     .setPin('.about-us-shape')
     .setTween(tl)
