@@ -38,7 +38,7 @@ const tl = new TimelineMax();
 tl.fromTo(
     '.about-us-shape',
     1,
-    {x: '0%', scale: .45},
+    {x: '0%', scale: .4},
     {x: '0%',scale: 1.5, ease: Linear.easeNone},
     '+=0.1'
 )
