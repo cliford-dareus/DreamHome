@@ -37,9 +37,10 @@ img{
 
 /* ================= UTILITY ================= */
 .container{
-    max-width: 90%;
+    max-width: 1440px;
     margin-inline: auto;
     /* overflow-x: hidden; */
+    padding-inline: 1em; 
 }
 
 .flex{
@@ -185,17 +186,25 @@ img{
 }
 
 /* ================== HERO ================== */
+.hero{
+  padding-top: 2em;
+}
+
 .hero_top_content{
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 2em;
-    gap: 1em;
+    gap: 2em;
 }
 
 .hero_title{
     font-size: 3rem;
-    line-height: 1;
+    line-height: 0.8;
+}
+
+.hero_img{
+  display: none;
 }
 
 .hero_title_accent{
@@ -212,6 +221,7 @@ img{
 
 .hero_image{
     position: relative;
+    margin-top: 2em;
 }
 
 .hero_image img{
@@ -222,7 +232,6 @@ img{
 @media screen and (min-width: 670px) {
     .hero{
         width: 100%;
-        height: calc(100vh - 70px);
         overflow: hidden;
     }
 
@@ -235,11 +244,13 @@ img{
     }
 
     .hero_text{
-        width: 70%;
+        width: 65ch;
     }
 
     .hero_img{
-        width: 30%;
+      display: block;
+        width: 40%;
+        height: 200px;
     }
 
     .hero_img img{
@@ -253,20 +264,19 @@ img{
     .hero_image{
         position: relative;
         width: 100%;
-        height: 340px;
+        height: 250px;
     }
 
     .hero_pic{
         width: 100%;
-        height: 100% !important;
+        height: 100%;
         overflow: hidden;
+        position: relative;
     }
 
     .hero_pic img{
-        object-fit: cover;
-        object-position: 0 -350px;
-        width: 100%;
-        height: 340px;
+        position: absolute;
+
     }
 
 }
@@ -387,7 +397,7 @@ main{
 @media screen and (min-width: 670px) {
     .hero_stat{
     position: absolute;
-    top: -220px;
+    top: -100px;
     width: 90%;
     padding: 2em;
     background-color: var(--clr--100);
@@ -453,7 +463,7 @@ main{
 .project_grid{
     display: grid;
     margin: 1em 0;
-    gap: 2em;
+    gap: 1em;
     margin-top: 3em;
 }
 
@@ -477,17 +487,6 @@ main{
     
 }
 
-.one,
-.two,
-.three,
-.four,
-.five,
-.six,
-.seven{
-    height: 100%;
-    width: 100%;
-}
-
 @media screen and (min-width: 670px){
     .project_grid{
         grid-template-columns: repeat(8, 1fr);
@@ -501,6 +500,8 @@ main{
     .six{
         grid-column: span 3 ;
         grid-row: span 2;
+        width: 100%;
+        height: 100%;
     }
     
     .two{
@@ -630,13 +631,16 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     gap: 1em;
     overflow-x: scroll;
 }
 
 .trusted-company div{
-    width: 150px;;
+    width: calc(100%/2);
     aspect-ratio: 1;
+    height: 200px;
+    background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
