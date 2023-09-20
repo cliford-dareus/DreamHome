@@ -240,6 +240,7 @@ img{
         padding-top: 4em;
         padding-bottom: 4em;
         align-items: center;
+        height: 500px;
         gap: 1em;
     }
 
@@ -250,11 +251,16 @@ img{
     .hero_img{
       display: block;
         width: 40%;
-        height: 200px;
+        height: 100%;
+        position: relative;
     }
 
     .hero_img img{
         width: 100%;
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        object-fit: cover;
     }
 
     .hero_title{
@@ -265,6 +271,7 @@ img{
         position: relative;
         width: 100%;
         height: 250px;
+        margin-top: 2em;
     }
 
     .hero_pic{
@@ -286,8 +293,8 @@ main{
     overflow: hidden;
 }
 
-.feature{
-    position: relative;
+.feature_container{
+  position: relative;
 }
 
 .hero_stat{
@@ -327,6 +334,11 @@ main{
     font-size: 1rem;
 }
 
+.stat_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .feature_content{
     width: 100%;
@@ -397,8 +409,7 @@ main{
 @media screen and (min-width: 670px) {
     .hero_stat{
     position: absolute;
-    top: -100px;
-    width: 90%;
+    top: -150px;
     padding: 2em;
     background-color: var(--clr--100);
     z-index: 333;
@@ -416,7 +427,7 @@ main{
     }
 
     .feature_content{
-        margin-top: 4em;
+        margin-top: 8em;
         padding: 4em 0;
     }
 
